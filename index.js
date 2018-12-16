@@ -1,6 +1,6 @@
 // Code your solution here:
 function driversWithRevenueOver(driver, revenue) {
-  return driver.filter(function(driv) { return driv.revenue >= revenue })
+  return driver.filter(function(driver) { return driver.revenue >= revenue })
 }
 
 function driverNamesWithRevenueOver(drivers, revenue) {
@@ -9,10 +9,10 @@ function driverNamesWithRevenueOver(drivers, revenue) {
 }
 
 function exactMatch(drivers, js) {
-  return drivers.filter(function(d) { return d[Object.keys(js)[0]] === Object.values(js)[0];});
+  return drivers.filter(function(driver) { return driver[Object.keys(js)[0]] === Object.values(js)[0];});
 }
 
 function exactMatchToList(drivers, js) {
   let newArray = exactMatch(drivers, js)
-  return newArray.map(function(d) { return d.name; });
+  return newArray.map(function(driver) { return driver.name; });
 }
